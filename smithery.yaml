@@ -11,6 +11,8 @@ runtime:
 build:
   command: npm install && npm run build
 
+startCommand: npm start
+
 deploy:
   type: http
   port: 3000
