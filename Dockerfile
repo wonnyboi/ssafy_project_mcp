@@ -8,14 +8,11 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy source code
+# Copy application code
 COPY . .
 
-# Build TypeScript code
+# Build the application
 RUN npm run build
 
-# Expose port
-EXPOSE 3000
-
-# Start server
-CMD ["npm", "start"] 
+# Command will be provided by smithery.yaml
+CMD ["node", "dist/server.js"] 
