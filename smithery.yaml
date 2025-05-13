@@ -1,0 +1,35 @@
+name: project-portfolio-guide
+version: 1.0.0
+description: A Model Context Protocol server for collecting project portfolio information through structured conversation
+author: Your Name
+license: MIT
+
+runtime:
+  type: node
+  version: 18.x
+
+build:
+  command: npm install && npm run build
+
+deploy:
+  type: http
+  port: 3000
+  endpoint: /mcp
+
+config:
+  - name: PORT
+    type: number
+    default: 3000
+    description: Port number for the server
+
+  - name: NODE_ENV
+    type: string
+    default: production
+    description: Node environment
+
+permissions:
+  - type: github
+    scopes:
+      - repo
+      - read:user
+    description: Required for accessing GitHub repository information
