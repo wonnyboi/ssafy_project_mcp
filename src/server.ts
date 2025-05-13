@@ -3,6 +3,11 @@ import { join } from 'path';
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { Message, ServerConfig } from './types';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // 단계 정의 파일 읽기
 const steps = readFileSync(join(__dirname, 'steps.md'), 'utf-8')

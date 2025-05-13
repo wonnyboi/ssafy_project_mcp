@@ -1,10 +1,11 @@
 {
+  "type": "module",
   "name": "project-portfolio-guide",
   "version": "1.0.0",
   "description": "A Model Context Protocol server for collecting project portfolio information",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && copy src\\steps.md dist\\steps.md",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
     "test": "jest"
