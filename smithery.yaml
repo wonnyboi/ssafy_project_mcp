@@ -12,6 +12,7 @@ build:
   command: npm install && npm run build
 
 startCommand:
+  type: http
   command: ["node", "dist/server.js"]
   port: 3000
 
